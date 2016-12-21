@@ -1,0 +1,11 @@
+th run.lua \
+--dataset custom \
+--cachepath /tmp \
+--datapath /media/eightbit/data_hdd/Projects/MapSegmentation/DATA/uydumask/ \
+--threads 2 \
+--save /media/eightbit/data_hdd/Libs/TorchLibs/ENet-training/train/my_models/ \
+--imHeight 448 \
+--imWidth 448 \
+--maskHeight 56 \
+--maskWidth 56 \
+--batchSize 12 \

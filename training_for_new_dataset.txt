@@ -1,0 +1,7 @@
+- Create a new data loader
+    - Create dataset-gen.lua for loading dataset path into a data structure
+    including image paths.
+    - Create dataset.lua for image loading.
+        - "get()" loads image/label pairs
+        - "preprocess()" applies preprocessing like augmentation, scaling etc.
+- Check train_scripts and edit for your own good.

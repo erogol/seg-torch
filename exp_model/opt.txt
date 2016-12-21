@@ -1,0 +1,42 @@
+maskWidth : 480
+nThreads : 3
+learningRate : 0.01
+plot : true
+batchSize : 3
+classWeights :  0.0000
+ 0.5887
+ 0.5105
+ 2.6966
+ 0.4502
+ 1.1785
+ 0.7703
+ 2.4783
+ 2.5273
+ 1.0123
+ 3.2375
+ 4.1312
+[torch.FloatTensor of size 12]
+
+maskHeight : 360
+channels : 3
+model : segnet
+save : /media/eightbit/data_hdd/Libs/TorchLibs/ENet-training/train/my_models/
+CNNEncoder : /media/Models/CamVid/enc/model-100.net
+mean : table: 0x4020a1e8
+manualSeed : 0
+cachepath : /tmp
+nGPU : 1
+momentum : 0.9
+checkpoint : false
+imHeight : 360
+dataset : camvid
+printNorm : false
+devid : 1
+classes : table: 0x40209ec8
+datapath : /media/eightbit/data_hdd/Datasets/CamVid/
+learningRateDecaySteps : 50
+maxepoch : 200
+noConfusion : all
+weightDecay : 0.0002
+std : table: 0x4020b2a8
+imWidth : 480
