@@ -24,3 +24,5 @@ activation. It is below in accuracy but really-faster in training.
 ```exp_model/``` includes a proof of concept on CamVid dataset. If you compare
 the results with the real-project this implementation has higher values
 interestingly (at least for me) :) .
+
+Model will be shared on Dropbox, as soon as I find some time to do so.
