@@ -11,8 +11,6 @@ function CamvidDataset:__init(imageInfo, opt, split)
     self.classes = imageInfo.classes
     self.opt = opt
     self.split = split
-    self.dir = opt.datapath
-    assert(paths.dirp(self.dir), 'directory does not exist: ' .. self.dir)
     collectgarbage()
 end
 
@@ -22,8 +20,8 @@ function CamvidDataset:get(i)
     local image_path = ffi.string(self.imageInfo.imagePath[i]:data())
     local label_path = ffi.string(self.imageInfo.labelPath[i]:data())
 
-    local image = self:_loadImage(paths.concat(self.dir, image_path), 3)
-    local label = self:_loadImage(paths.concat(self.dir, label_path), 1):squeeze():float() + 2
+    local image = self:_loadImage(image_path, 3)
+    local label = self:_loadImage(label_path, 1):squeeze():float() + 2
     local mask = label:eq(13):float()
     label = label - mask * #self.classes
 
